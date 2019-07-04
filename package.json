@@ -5,7 +5,9 @@
   "scripts": {
     "test": "NODE_ENV=test istanbul test _mocha",
     "start": "node server/server.js",
-    "coveralls": "cat coverage/lcov.info | coveralls"
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -41,7 +43,8 @@
     "ripple-lib-transactionparser": "^0.4",
     "simple-asyncify": "^0.1.0",
     "sqlite3": "^3.0.2",
-    "winston": "^1.0.0"
+    "winston": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "assert-diff": "^0.0.4",
@@ -52,5 +55,6 @@
     "npm-shrinkwrap": "^5.3",
     "supertest": "^0.13.0",
     "ws": "^0.4.32"
-  }
+  },
+  "snyk": true
 }
